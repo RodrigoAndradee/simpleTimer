@@ -3,9 +3,9 @@ import { useEffect, useRef, useState } from "react";
 import { ButtonsToolbar } from "./components/ButtonsToolbar/ButtonsToolbar";
 import { TimerCard } from "./components/TimerCard/TimerCard";
 import { formatTime } from "./helpers";
-import { MILLISECONDS, SECONDS_PER_MINUTE } from "./Timer.types";
+import { MILLISECONDS } from "./Timer.types";
 
-const INITIAL_TIME = 50 * SECONDS_PER_MINUTE * MILLISECONDS; // Initial time in ms
+const INITIAL_TIME = 0; // Initial time in ms
 
 export const Timer = () => {
   const [remainingTime, setRemainingTime] = useState(INITIAL_TIME);
@@ -60,6 +60,7 @@ export const Timer = () => {
         handleStart={handleStart}
         handlePause={handlePause}
         handleReset={handleReset}
+        handleUpdateTimer={setRemainingTime}
       />
     </Card>
   );

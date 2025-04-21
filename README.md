@@ -1,54 +1,48 @@
-# React + TypeScript + Vite
+# ⏱️ simpleTimer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um timer minimalista feito com **React**, **TypeScript**, **TailwindCSS** e **shadcn/ui**.  
+Esse projeto foi criado como um experimento para estudar novas ferramentas e práticas modernas no ecossistema React.
 
-Currently, two official plugins are available:
+![preview](./Captura%20de%20tela%20de%202025-04-21%2009-27-17.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias
 
-## Expanding the ESLint configuration
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Instalação
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Clone o repositório e instale as dependências:
+
+```bash
+git clone https://github.com/RodrigoAndradee/simpleTimer.git
+cd simpleTimer
+yarn install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ▶️ Execução
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Inicie o servidor de desenvolvimento:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+yarn dev
 ```
+
+A aplicação estará disponível em http://localhost:5173.
+
+## 📚 Funcionalidades
+
+- Timer com ajuste de horas, minutos e segundos
+- Controles de iniciar, pausar, resetar e editar
+- Interface responsiva e acessível com shadcn/ui
+- Modo Stopwatch (cronômetro) _(In progress)_
+
+## 📌 Objetivo
+
+Esse projeto tem fins educacionais, com foco em praticar:
+
+- Estruturação de componentes com Atomic Design
+- Utilização de bibliotecas modernas de UI
+- Gerenciamento de estado local para temporizadores
